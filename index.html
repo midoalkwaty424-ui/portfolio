@@ -12,7 +12,7 @@
 <script>document.documentElement.classList.remove("no-js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400..700&family=Mrs+Saint+Delafield&family=Syne:wght@600..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -45,18 +45,18 @@
 </div>
 
 <main id="main">
-<section class="hero" id="top"><div class="w hgrid">
-<div class="hl">
-<figure class="banner"><img id="pf" src="assets/profile.jpg" alt="Portrait of Mohamed Mahmoud in a suit" width="800" height="1000"><span class="tint"></span></figure>
-<svg class="sig" viewBox="0 0 340 120" aria-hidden="true"><text class="sigt" x="8" y="84">Mohamed</text></svg>
-<div class="soc"><a href="https://github.com/midoalkwaty424-ui" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a><a href="https://www.linkedin.com/in/mohamed-mahmoud-529858347/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a><a href="https://www.facebook.com/mido.mahmed.92102/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a></div>
+<section class="hero" id="top"><div class="w hero2">
+<h1 aria-label="Mohamed Mahmoud"><span class="ln"><span class="w">Mohamed</span></span><span class="ln"><span class="w">Mahmoud</span></span></h1>
+<div class="hrow">
+<figure class="banner"><img id="pf" src="assets/profile.jpg" alt="Portrait of Mohamed Mahmoud" width="800" height="1000" fetchpriority="high"><span class="tint"></span>
+<div class="soc"><a href="https://github.com/midoalkwaty424-ui" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a><a href="https://www.linkedin.com/in/mohamed-mahmoud-529858347/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a><a href="https://www.facebook.com/mido.mahmed.92102/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a></div></figure>
+<div class="labwrap h3d"><canvas id="c3d" role="img" aria-label="Interactive 3D shape built with Three.js"></canvas>
+<p class="hint mono">Drag to rotate · Built with Three.js</p>
+<p class="nofx mono" hidden>Your browser could not start WebGL, so the 3D scene is hidden.</p></div>
 </div>
-<div class="hr">
-<h1><span>Mohamed</span><span>Mahmoud</span></h1>
-<p class="role">Junior Front-End Developer based in Egypt</p>
-<a class="pill" data-dl href="assets/Mohamed_Mahmoud_CV.pdf" download>Download CV<svg><use href="#i-down"/></svg></a>
-<p class="cue mono">Scroll</p>
-</div></div></section>
+<div class="hmeta"><p class="role">Junior Front-End Developer based in Egypt</p>
+<div class="hact"><a class="pill" data-dl href="assets/Mohamed_Mahmoud_CV.pdf" download>Download CV<svg><use href="#i-down"/></svg></a><p class="cue mono">Scroll</p></div></div>
+</div></section>
 
 <div class="mq" aria-hidden="true"><div class="mt" id="mt"></div></div>
 
@@ -76,23 +76,31 @@
 
 <section class="sec" id="projects"><div class="w">
 <p class="eb mono rv">Projects</p><h2 class="big rv">Selected work</h2>
-<article class="pj rv"><span class="num">01.</span>
-<div class="shot"><img src="assets/sneakerx.jpg" alt="SneakerX footwear store homepage" loading="lazy" width="1280" height="617"></div>
-<div class="pi"><h3>SneakerX <span class="chip mono">IN PROGRESS</span></h3>
+<div class="pstack">
+<article class="pcard" style="--i:0"><div class="shot" data-cur="Soon"><img src="assets/sneakerx.jpg" alt="SneakerX footwear store homepage" loading="lazy" width="1280" height="617"></div>
+<div class="pi"><span class="num">01.</span><h3>SneakerX <span class="chip mono">IN PROGRESS</span></h3>
 <p class="mono stack">HTML / CSS / JavaScript · Arabic (RTL)</p>
 <p>A bold, dark-themed online sneaker store with an Arabic-first interface and a product-led hero section.</p>
 <ul><li>Header with cart counter, wishlist and product search.</li><li>“Picks for you” product cards with prices in EGP.</li><li>Full navigation: brands, styles, featured, all products, blog, support and contact.</li></ul></div></article>
+<article class="pcard" style="--i:1"><a class="shot art" data-cur="View" href="https://midoalkwaty424-ui.github.io/portfolio/" target="_blank" rel="noopener" aria-label="Open the portfolio website"><span class="mm">MM.</span></a>
+<div class="pi"><span class="num">02.</span><h3>Portfolio Website</h3>
+<p class="mono stack">HTML / CSS / JavaScript · GSAP · Lenis</p>
+<p>A bilingual (English / Arabic) personal portfolio with scroll animations and a cut-out hero portrait.</p>
+<ul><li>Right-to-left Arabic version with a language switch.</li><li>Smooth scrolling and scroll-linked titles.</li><li>Static site hosted on GitHub Pages.</li></ul>
+<p><a class="ic sm" href="https://github.com/midoalkwaty424-ui/portfolio" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg><span>View on GitHub</span></a></p></div></article>
+</div>
 <p class="mono soon">More projects coming soon.</p>
 </div></section>
 
 <section class="sec" id="skills"><div class="w">
 <p class="eb mono rv">Skills</p><h2 class="big rv">My toolkit</h2>
+<div class="skgrid"><div class="cloud rv" id="cloud" aria-hidden="true"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>RTL / Arabic UI</span><span>E-commerce UI</span><span>VS Code</span><span>Edara ERP</span><span>Microsoft Office</span><span>Problem Solving</span><span>Quick Learner</span><span>Communication</span><span>Teamwork</span><span>Egyptian Law</span><span>Legal Research</span><span>B2B Sales</span><span>Negotiation</span><span>Account Management</span><span>Works Under Pressure</span></div>
 <div class="sk">
 <div class="rv"><h3 class="mono">Front-End</h3><p><span>HTML</span><span>CSS</span><span>JavaScript</span><span>RTL / Arabic UI</span><span>E-commerce UI</span></p></div>
 <div class="rv"><h3 class="mono">Tools &amp; Systems</h3><p><span>VS Code</span><span>Microsoft Office</span><span>Edara ERP</span></p></div>
 <div class="rv"><h3 class="mono">Soft Skills</h3><p><span>Problem Solving</span><span>Quick Learner</span><span>Communication</span><span>Teamwork</span><span>Works Under Pressure</span></p></div>
 <div class="rv"><h3 class="mono">Studied &amp; Learned</h3><p><span>Egyptian Law</span><span>Legal Research</span><span>B2B Sales</span><span>Negotiation</span><span>Account Management</span></p></div>
-</div></div></section>
+</div></div></div></section>
 
 <section class="sec" id="experience"><div class="w">
 <p class="eb mono rv">Background</p><h2 class="big rv">What I learned before coding</h2>
@@ -118,6 +126,7 @@
 <p class="mono mut loc rv">Cairo, Egypt · <a href="tel:+201010032629" dir="ltr">+20 101 003 2629</a></p>
 </div></section>
 </main>
+<a class="mega" href="mailto:Midoalkwaty424@gmail.com" aria-label="Email Mohamed"><div class="mgt" id="mgt"></div></a>
 <footer><div class="w foot mono"><span>© 2026 Mohamed Mahmoud Abd Allah. All rights reserved.</span><span>Junior Front-End Developer · Cairo, Egypt</span></div></footer>
 <a class="wa" href="https://wa.me/201010032629" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
 <button id="tt" type="button" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
@@ -125,6 +134,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>
