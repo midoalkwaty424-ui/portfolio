@@ -12,7 +12,7 @@
 <script>document.documentElement.classList.remove("no-js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400..700&family=Mrs+Saint+Delafield&family=Syne:wght@600..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -35,7 +35,7 @@
 <a class="brand" href="#top">Mohamed Mahmoud</a>
 <span class="avail mono"><i></i>Open to work</span>
 <nav class="links" aria-label="Primary" id="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Background</a><a href="#contact">Contact</a></nav>
-<button id="lg" class="round txt" type="button">عربي</button>
+<button id="kbtn" class="round txt mono" type="button" aria-label="Command menu">Ctrl K</button><button id="lg" class="round txt" type="button">عربي</button>
 <button class="round mbtn" type="button" popovertarget="menu" aria-label="Menu"><span></span><span></span></button>
 </div></header>
 <div id="menu" popover data-lenis-prevent>
@@ -50,16 +50,17 @@
 <div class="hrow">
 <figure class="banner"><img id="pf" src="assets/profile.jpg" alt="Portrait of Mohamed Mahmoud" width="800" height="1000" fetchpriority="high"><span class="tint"></span>
 <div class="soc"><a href="https://github.com/midoalkwaty424-ui" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a><a href="https://www.linkedin.com/in/mohamed-mahmoud-529858347/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a><a href="https://www.facebook.com/mido.mahmed.92102/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a></div></figure>
-<div class="labwrap h3d"><canvas id="c3d" role="img" aria-label="Interactive 3D laptop showing my projects"></canvas>
+<div class="labwrap h3d" data-cur="Drag"><canvas id="c3d" role="img" aria-label="Interactive 3D laptop showing my projects"></canvas>
 <p class="hint mono">Drag to rotate</p>
 <p class="nofx mono" hidden>Your browser could not start WebGL, so the 3D scene is hidden.</p></div>
 </div>
-<div class="hmeta"><p class="role">Junior Front-End Developer based in Egypt</p>
+<div class="hmeta"><div class="rolebox"><p class="role">Junior Front-End Developer based in Egypt</p><p class="clock mono"><i></i><span>Cairo local time</span> <b id="clock"></b></p></div>
 <div class="hact"><a class="pill" data-dl href="assets/Mohamed_Mahmoud_CV.pdf" download>Download CV<svg><use href="#i-down"/></svg></a><p class="cue mono">Scroll</p></div></div>
 </div></section>
 
 <div class="mq" aria-hidden="true"><div class="mt" id="mt"></div></div>
 
+<section class="stats w" aria-label="Quick facts"><div class="st rv"><b data-n="3">0</b><span>Core technologies</span></div><div class="st rv"><b data-n="2">0</b><span>Projects</span></div><div class="st rv"><b data-n="2">0</b><span>Years in business &amp; ERP</span></div><div class="st rv"><b data-n="2">0</b><span>Languages</span></div></section>
 <section class="sec" id="about"><div class="w">
 <p class="eb mono rv">About</p><h2 class="big rv">From law to code</h2>
 <p class="statement rv">I’m a law graduate who found my passion in programming. I build websites with HTML, CSS and JavaScript, and I’m currently developing SneakerX, an Arabic-first e-commerce store. My law degree and two years of B2B sales and ERP work taught me how businesses operate, and I bring that mindset to every project.</p>
@@ -94,7 +95,7 @@
 
 <section class="sec" id="skills"><div class="w">
 <p class="eb mono rv">Skills</p><h2 class="big rv">My toolkit</h2>
-<div class="skgrid"><div class="cloud rv" id="cloud" aria-hidden="true"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>RTL / Arabic UI</span><span>E-commerce UI</span><span>VS Code</span><span>Edara ERP</span><span>Microsoft Office</span><span>Problem Solving</span><span>Quick Learner</span><span>Communication</span><span>Teamwork</span><span>Egyptian Law</span><span>Legal Research</span><span>B2B Sales</span><span>Negotiation</span><span>Account Management</span><span>Works Under Pressure</span></div>
+<div class="skgrid"><div class="cloud rv" id="cloud" aria-hidden="true" data-cur="Drag"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>RTL / Arabic UI</span><span>E-commerce UI</span><span>VS Code</span><span>Edara ERP</span><span>Microsoft Office</span><span>Problem Solving</span><span>Quick Learner</span><span>Communication</span><span>Teamwork</span><span>Egyptian Law</span><span>Legal Research</span><span>B2B Sales</span><span>Negotiation</span><span>Account Management</span><span>Works Under Pressure</span></div>
 <div class="sk">
 <div class="rv"><h3 class="mono">Front-End</h3><p><span>HTML</span><span>CSS</span><span>JavaScript</span><span>RTL / Arabic UI</span><span>E-commerce UI</span></p></div>
 <div class="rv"><h3 class="mono">Tools &amp; Systems</h3><p><span>VS Code</span><span>Microsoft Office</span><span>Edara ERP</span></p></div>
@@ -130,11 +131,13 @@
 <footer><div class="w foot mono"><span>© 2026 Mohamed Mahmoud Abd Allah. All rights reserved.</span><span>Junior Front-End Developer · Cairo, Egypt</span></div></footer>
 <a class="wa" href="https://wa.me/201010032629" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
 <button id="tt" type="button" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+<nav class="dots" aria-label="Sections"><a href="#top"><span>Home</span><i></i></a><a href="#about"><span>About</span><i></i></a><a href="#focus"><span>Focus areas</span><i></i></a><a href="#projects"><span>Projects</span><i></i></a><a href="#skills"><span>Skills</span><i></i></a><a href="#experience"><span>Background</span><i></i></a><a href="#education"><span>Education</span><i></i></a><a href="#contact"><span>Contact</span><i></i></a></nav>
+<div id="fl" aria-hidden="true"></div>
 <div id="toast" role="status"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="script.js?v=8"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>
